@@ -1,0 +1,57 @@
+<div class="comparison-shell">
+  <div class="comparison-top">
+    <div class="comparison-header-bar">
+      <div class="comparison-index-wrap">
+        <div class="comparison-index">01 <span>/ 05</span></div>
+        <div class="comparison-title-group">
+          <small>MODEL · Alibaba · HappyOyster</small>
+          <h3>GC002 · Rectangular Sculpture Orbit</h3>
+        </div>
+      </div>
+      <div class="comparison-Controls-right">
+        <div class="comparison-badges">
+          <span class="comp-badge-family">Geometry Consistency</span>
+          <span class="comp-badge-vs">Preset Only vs. Preset + Agent</span>
+        </div>
+        <div class="demo-controls comparison-nav-btns">
+          <button type="button" aria-label="Previous comparison">←</button>
+          <div class="progress"><i style="width:20.0000%"></i></div>
+          <button type="button" aria-label="Next comparison">→</button>
+        </div>
+      </div>
+    </div>
+    <div class="comparison-prompt">
+      <div class="comparison-prompt-grid">
+        <div>
+          <span>OBJECTIVE</span>
+          <p class="comp-objective-text">Trace a rectangular trajectory around the central full-body sculpture while maintaining the camera’s original orientation, then return to the starting position.</p>
+          <p class="comparison-explanation"><strong>Preset Only</strong> executes the fixed rectangular trajectory in front of the central sculpture, so the sculpture remains continuously visible in the foreground. <strong>WorldPlay Agent (Preset + Agent)</strong> adapts the trajectory online to move around the sculpture, causing it to leave and later re-enter the field of view—providing a genuine test of spatial memory rather than keeping the target in view.</p>
+        </div>
+        <div class="comparison-actions-box">
+          <div class="comp-action-row">
+            <span>PRESET ONLY (FIXED ACTION)</span>
+            <code class="comp-preset-code">hold(D,1950ms) → hold(W,7800ms) → hold(A,3900ms) → hold(S,7800ms) → hold(D,1950ms)</code>
+          </div>
+          <div class="comp-action-row agent">
+            <span>WORLDPLAY AGENT (PRESET + AGENT)</span>
+            <code class="comp-agent-code">hold(D,1950ms) → hold(W,7800ms) → hold(A,3900ms) → hold(A,600ms) [Agent Extend] → hold(S,7800ms) → hold(D,1950ms)</code>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <figure class="comparison-card comparison-card-combined">
+    <div class="comparison-video-shell video-wrap">
+      <video controls="" playsinline="" preload="metadata" data-poster="./comparisons/control-strategies-gc002.jpg" poster="./comparisons/control-strategies-gc002.jpg">
+        <source type="video/mp4" data-src="./comparisons/control-strategies-gc002-720p.mp4" src="./comparisons/control-strategies-gc002-720p.mp4">
+        Your browser does not support video playback.
+      </video>
+      <div class="playback-speed comp-speed" role="group" aria-label="Comparison playback speed">
+        <button type="button" class="active" aria-pressed="true">1×</button>
+        <button type="button" class="" aria-pressed="false">2×</button>
+        <button type="button" class="" aria-pressed="false">3×</button>
+      </div>
+    </div>
+  </figure>
+</div>
+<script id="comparison-data" type="application/json">[{"caseId": "GC002", "model": "HappyOyster", "org": "Alibaba", "family": "Geometry Consistency", "tag": "Rectangular Sculpture Orbit", "tabLabel": "Sculpture Orbit", "duration": "60.0s", "src": "./comparisons/control-strategies-gc002-720p.mp4", "poster": "./comparisons/control-strategies-gc002.jpg", "objective": "Trace a rectangular trajectory around the central full-body sculpture while maintaining the camera\u2019s original orientation, then return to the starting position.", "explanation": "<strong>Preset Only</strong> executes the fixed rectangular trajectory in front of the central sculpture, so the sculpture remains continuously visible in the foreground. <strong>WorldPlay Agent (Preset + Agent)</strong> adapts the trajectory online to move around the sculpture, causing it to leave and later re-enter the field of view\u2014providing a genuine test of spatial memory rather than keeping the target in view.", "presetAction": "hold(D,1950ms) \u2192 hold(W,7800ms) \u2192 hold(A,3900ms) \u2192 hold(S,7800ms) \u2192 hold(D,1950ms)", "agentAction": "hold(D,1950ms) \u2192 hold(W,7800ms) \u2192 hold(A,3900ms) \u2192 hold(A,600ms) [Agent Extend] \u2192 hold(S,7800ms) \u2192 hold(D,1950ms)"}, {"caseId": "GC027", "model": "Genie 3", "org": "Google DeepMind", "family": "Geometry Consistency", "tag": "Sports Center 360\u00b0 In-Place Rotation", "tabLabel": "Playground 360\u00b0 Spin", "duration": "40.0s", "src": "./comparisons/control-strategies-gc027-720p.mp4", "poster": "./comparisons/control-strategies-gc027.jpg", "objective": "Rotate the camera 360 degrees in place, then return to the original angle facing the original view.", "explanation": "Under <strong>Preset Only</strong>, the fixed rotation duration (9450ms) stops part-way through the turn, leaving the camera facing empty playground flooring and distant apartments instead of the starting building. <strong>WorldPlay Agent (Preset + Agent)</strong> detects that the loop is incomplete and appends corrective right-turn steps (+3600ms total) to finish the full 360\u00b0 rotation back to the pink <em>SHILHAI STREET SPORTS CENTER</em> facade.", "presetAction": "hold(RIGHT,9450ms)", "agentAction": "hold(RIGHT,9450ms) \u2192 hold(RIGHT,1200ms)\u00d72 \u2192 hold(RIGHT,600ms)\u00d72 [Agent Extend]"}, {"caseId": "GC044", "model": "Genie 3", "org": "Google DeepMind", "family": "Geometry Consistency", "tag": "Graffiti Wall 360\u00b0 In-Place Rotation", "tabLabel": "Graffiti 360\u00b0 Spin", "duration": "18.0s", "src": "./comparisons/control-strategies-gc044-720p.mp4", "poster": "./comparisons/control-strategies-gc044.jpg", "objective": "Rotate the camera 360 degrees in place, then return to the original angle facing the original view.", "explanation": "Under <strong>Preset Only</strong>, the fixed rotation duration (8100ms) undershoots a full 360\u00b0 turn and stops facing down the street toward pedestrians. <strong>WorldPlay Agent (Preset + Agent)</strong> appends corrective right-turn steps online to complete the 360\u00b0 in-place rotation and return to the original brick wall with the green-hooded dog graffiti.", "presetAction": "hold(RIGHT,8100ms)", "agentAction": "hold(RIGHT,8100ms) \u2192 hold(RIGHT,1200ms) \u2192 hold(RIGHT,1500ms) \u2192 hold(RIGHT,600ms)\u00d72 [Agent Extend]"}, {"caseId": "OE024", "model": "Genie 3", "org": "Google DeepMind", "family": "Out-of-sight Evolution", "tag": "Victory Graffiti 360\u00b0 In-Place Rotation", "tabLabel": "Victory 360\u00b0 Spin", "duration": "36.0s", "src": "./comparisons/control-strategies-oe024-720p.mp4", "poster": "./comparisons/control-strategies-oe024.jpg", "objective": "Rotate the camera 360 degrees once in place.", "explanation": "Under <strong>Preset Only</strong>, the fixed rotation (7200ms) undershoots a full 360\u00b0 turn and drifts into a distant empty warehouse view, losing the painter. <strong>WorldPlay Agent (Preset + Agent)</strong> appends an extra rightward yaw (+1800ms) to keep rotating around the graffiti artist until the in-place 360\u00b0 loop better closes on the original wall.", "presetAction": "hold(RIGHT,7200ms)", "agentAction": "hold(RIGHT,7200ms) \u2192 hold(RIGHT,1800ms) [Agent Extend]"}, {"caseId": "OE041", "model": "Genie 3", "org": "Google DeepMind", "family": "Out-of-sight Evolution", "tag": "Cutting Tomato 90\u00b0 Right-Then-Left", "tabLabel": "Tomato Right-Left Pan", "duration": "20.0s", "src": "./comparisons/control-strategies-oe041-720p.mp4", "poster": "./comparisons/control-strategies-oe041.jpg", "objective": "Turn the view 90 degrees to the right, wait 2 seconds, then turn back to the original direction.", "explanation": "Under <strong>Preset Only</strong>, the fixed rightward turn barely shifts the camera\u2014the tomato and cleaver remain centered in the frame throughout, failing to move the foreground subjects out of sight. <strong>WorldPlay Agent (Preset + Agent)</strong> turns far enough right that the cutting board leaves the center of the view, then appends corrective leftward yaw (+1200ms) to return to the original cutting perspective.", "presetAction": "hold(RIGHT,1800ms) \u2192 wait(900ms) \u2192 hold(LEFT,1800ms)", "agentAction": "hold(RIGHT,1800ms) \u2192 wait(900ms) \u2192 hold(LEFT,1800ms) \u2192 hold(LEFT,600ms)\u00d72 [Agent Extend]"}]</script>
